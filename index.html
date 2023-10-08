@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: 'mayan';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./Mayan.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: black;
+            padding: 1%;
+            font-size: 30px;
+            font-family: mayan;
+            color: white;
+        }
+
+        .menu div {
+            padding-top: 2%;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f7f2f2;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .bodyimg {
+            position: relative;
+        }
+
+        .bodyimg p {
+            text-align: center;
+            color: #f7f2f2;
+            font-size: 75px;
+            font-family: mayan;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bodyimg h3 {
+            text-align: center;
+            color: #f7f2f2;
+            font-family: mayan;
+            font-size: 35px;
+            width: 50%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .grid {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20;
+            font-family: sans-serif;
+            padding-right: 8%;
+        }
+
+        .grid img {
+            border: 2px solid black;
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .origami {
+            border-radius: 20px;
+            background-color: #ffffff;
+            padding: 60px;
+            margin-left: 105px;
+            margin-bottom: 105px;
+            width: 310px;
+            font-family: mayan;
+            text-align: center;
+        }
+
+        .origami h2 {
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        .origami p {
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .origami:hover {
+
+            transform: scale(1.1);
+        }
+
+        .text h2 {
+            top: 62%;
+            left: 35%;
+            font-family: mayan;
+            font-size: 50px;
+            position: static;
+            text-align: center;
+            align-content: center;
+        }
+
+        .text p {
+            text-align: center;
+            align-content: center;
+            font-family: mayan;
+            font-size: 35px;
+            line-height: 35px;
+        }
+
+        .headText {
+            padding-right: 35%;
+        }
+
+        .textH3 {
+            font-family: mayan;
+            font-size: 40px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .textH4 {
+            line-height: 35px;
+            font-size: 23px;
+        }
+
+        .text h3 {
+            font-family: mayan;
+            font-size: 30px;
+            position: static;
+            text-align: center;
+            align-content: center;
+        }
+
+        .bodyimg img {
+            height: 600px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1170px) {
+            .menu {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: black;
+                padding: 1%;
+                font-size: 30px;
+                font-family: mayan;
+                color: white;
+            }
+
+            .menu div {
+                padding-top: 2%;
+            }
+
+            body {
+                margin: 0;
+                background-color: #f7f2f2;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .bodyimg {
+                position: relative;
+            }
+
+            .bodyimg img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .bodyimg p {
+                text-align: center;
+                color: #f7f2f2;
+                font-size: 75px;
+                font-family: mayan;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .bodyimg h3 {
+                text-align: center;
+                color: #f7f2f2;
+                font-family: mayan;
+                font-size: 35px;
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .grid {
+                display: flex;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 60px;
+                margin: 20px;
+                font-family: sans-serif;
+                padding-right: 10%;
+            }
+
+            .grid img {
+                border: 2px solid black;
+                border-radius: 25px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .origami {
+                border-radius: 20px;
+                background-color: #ffffff;
+                padding: 75px;
+                font-family: mayan;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .origami h2 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            .origami p {
+                font-size: 30px;
+                line-height: 35px;
+            }
+
+            .origami:hover {
+                transform: scale(1.1);
+            }
+
+            .text {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .text h2 {
+                font-family: mayan;
+                font-size: 50;
+                margin-bottom: 10px;
+            }
+
+            .text p {
+                font-family: mayan;
+                font-size: 35px;
+                line-height: 35px;
+            }
+
+            .bodyimg img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <title>Cultura Maya</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <img class="headText" src="./Icon.png" width="5%" height="5%">
+            <div class="headText">
+                Cultura Maya
+            </div>
+            <div>
+                <a href="https://www.facebook.com/colegioggm/?locale=es_LA">
+                    Acerca de nosotros
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bodyimg">
+        <img src="bg.png">
+        <p>
+            CULTURA MAYA
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>
+            Página Web Creada Por:
+            <br>
+            Diego André Muñoz Rodríguez, María Fernanda Sánchez del Valle, Daniela Monserrath Martínez Rodríguez y
+            Alejandro Rafael García Sánchez.
+            <br>
+        </h3>
+    </div>
+    <div class="text">
+        <h2>Explicación de la Cultura Maya</h2>
+        <p>
+            La cultura maya es considerada una de las civilizaciones más importantes de Mesoamérica. Realizaron grandes
+            aportaciones a la arquitectura, astronomía, medicina y matemáticas. Su legado e historia han inspirado un
+            sinfín de investigaciones para descifrar cómo vivían y por qué abandonaron sus esplendorosas ciudades.
+        </p>
+    </div>
+    <div class="text">
+        <h2>Características de la cultura Maya</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img1.gif">
+            <br>
+            <br>
+            <h2>Sistema de escritura</h2>
+            <p>
+                Los Mayas desarrollaron un complejo sistema de escritura jeroglífica, utilizado principalmente para
+                registrar eventos históricos y religiosos.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img2.jpeg">
+            <br>
+            <br>
+            <h2>Centros urbanos</h2>
+            <p>
+                Construyeron impresionantes ciudades-estado, como Tikal y Chichén Itzá, con grandes templos y palacios
+                que reflejan su sofisticado sistema de gobierno.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img3.jpeg">
+            <br>
+            <br>
+            <h2>Desarrollo científico</h2>
+            <p>
+                Los Mayas realizaron importantes avances en matemáticas, astronomía y medicina, dejando un legado
+                significativo para la humanidad.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>Ubicación Geográfica</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img4.jpeg">
+            <br>
+            <br>
+            <h2>Zonas geográficas</h2>
+            <p>
+                La cultura Maya se extendió por varios países en Mesoamérica, incluyendo México, Guatemala, Honduras, El
+                Salvador y Belice.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img5.jpeg">
+            <br>
+            <br>
+            <h2>Paisajes naturales</h2>
+            <p>
+                Sus territorios cubrían una amplia variedad de paisajes, desde densas selvas tropicales hasta secas
+                mesetas y costas caribeñas.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img6.jpeg">
+            <br>
+            <br>
+            <h2>Bellezas naturales</h2>
+            <p>
+                La región maya cuenta con hermosos cenotes, cuevas y ríos subterráneos, que eran sagrados para los
+                antiguos mayas.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>Historia y civilización Maya</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img7.jpeg">
+            <br>
+            <br>
+            <h2>Preclásico (2000 A.N.E. - 250 D.N.E.)</h2>
+            <p>
+                Se establecen las primeras aldeas, se desarrolla la agricultura y se inicia el comercio. Se construyen
+                las primeras pirámides ceremoniales.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img8.jpeg">
+            <br>
+            <br>
+            <h2>Clásico (250 D.N.E. - 900 D.N.E.)</h2>
+            <p>
+                Periodo de mayor esplendor de la cultura Maya, con el desarrollo de grandes centros urbanos y avances en
+                ciencia, arte y arquitectura.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img9.jpeg">
+            <br>
+            <br>
+            <h2>Posclásico (900 D.N.E. - 1500 D.N.E.)</h2>
+            <p>
+                Declive de los centros urbanos mayas, aunque algunas ciudades como Mayapán y Chichén Itzá continúan
+                floreciendo.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>Arquitectura y arte Maya</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img10.jpeg">
+            <br>
+            <br>
+            <h2>Pirámides</h2>
+            <p>
+                Construyeron majestuosas pirámides escalonadas, como la Pirámide de Kukulcán en Chichén Itzá, destacando
+                su precisión astronómica.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img11.jpeg">
+            <br>
+            <br>
+            <h2>Esculturas</h2>
+            <p>
+                Crearon impresionantes esculturas en piedra, representando dioses, reyes y eventos históricos con gran
+                detalle y realismo.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img12.jpeg">
+            <br>
+            <br>
+            <h2>Murales</h2>
+            <p>
+                Embellecieron sus templos con coloridos murales que narraban mitos y leyendas, ofreciendo una visión de
+                su cosmovisión y creencias.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>Religión y cosmovisión Maya</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img13.webp">
+            <br>
+            <br>
+            <h2>Dioses y diosas</h2>
+            <p>
+                Los Mayas adoraban a una amplia variedad de deidades, como el dios del sol, del maíz y de la lluvia,
+                quienes influían en la vida cotidiana.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img14.jpeg">
+            <br>
+            <br>
+            <h2>Rituales sagrados</h2>
+            <p>
+                Practicaban ceremonias y rituales para mantener el equilibrio entre el mundo natural y espiritual,
+                buscando la protección divina y la prosperidad.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img15.jpeg">
+            <br>
+            <br>
+            <h2>Cosmovisión cíclica</h2>
+            <p>
+                Creían en un ciclo eterno de creación y destrucción, donde cada era era influenciada por el cosmos y el
+                movimiento de los astros.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="text">
+        <h2>Calendario y sistema de escritura Maya</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img16.jpeg">
+            <br>
+            <br>
+            <h2>Calendario solar</h2>
+            <p>
+                Basado en la posición del sol, dividido en 18 meses de 20 días cada uno, más 5 días adicionales
+                considerados de mala suerte.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img17.jpeg">
+            <br>
+            <br>
+            <h2>Calendario sagrado</h2>
+            <p>
+                Combinaba ciclos de 260 días y 13 números sagrados, utilizado para rituales y predicciones.
+            </p>
+            
+        </div>
+        <div class="origami">
+            <img src="./Img/img18.jpeg">
+            <br>
+            <br>
+            <h2>Sistema de escritura</h2>
+            <p>
+                Usando jeroglíficos, combinaban imágenes y glifos para representar sonidos y palabras, transmitiendo su
+                historia y conocimiento.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>Descubrimientos y sitios arqueológicos</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img19.jpg">
+            <br>
+            <br>
+            <h2>Tikal</h2>
+            <p>
+                Una de las ciudades más importantes y emblemáticas de la civilización Maya, con impresionantes templos y
+                una biodiversa selva circundante.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img20.jpeg">
+            <br>
+            <br>
+            <h2>Chichén Itzá</h2>
+            <p>
+                Una de las Siete Maravillas del Mundo Moderno, con la impresionante Pirámide de Kukulcán y el Templo de
+                los Guerreros.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img21.jpeg">
+            <br>
+            <br>
+            <h2>Palenque</h2>
+            <p>
+                Conocida por sus elegantes esculturas y su Templo de las Inscripciones, donde se encontró la tumba del
+                gobernante Pakal el Grande.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img22.jpeg">
+            <br>
+            <br>
+            <h2>Copán</h2>
+            <p>
+                Especialmente notable por su rica iconografía, que representa mitos y genealogías reales, así como los
+                famosos altares de sacrificio.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>Influencia de la cultura Maya en la actualidad</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img23.jpeg">
+            <br>
+            <br>
+            <h2>Arte y diseño</h2>
+            <p>
+                El arte Maya ha inspirado a artistas contemporáneos y su simbolismo se refleja en joyería, textiles y
+                diseño de interiores.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img24.jpeg">
+            <br>
+            <br>
+            <h2>Medicina natural</h2>
+            <p>
+                Muchos remedios tradicionales de la medicina maya se siguen utilizando en la actualidad, destacando su
+                conocimiento de las propiedades curativas de las plantas.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img25.png">
+            <br>
+            <br>
+            <h2>Turismo cultural</h2>
+            <p>
+                Los sitios arqueológicos mayas atraen millones de visitantes cada año, deleitándose con la majestuosidad
+                y misterio de esta antigua cultura.
+        </div>
+    </div>
+</body>
+<div class="header">
+    <div class="menu">
+        <img class="headText" src="./Icon.png" width="5%" height="5%">
+        <div class="headText">
+            Cultura Maya
+        </div>
+        <div>
+            <a href="https://www.nationalgeographicla.com/historia/2022/09/quienes-fueron-los-mayas">
+                Más Datos
+            </a>
+        </div>
+    </div>
+</div>
+</html>
